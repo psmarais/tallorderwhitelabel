@@ -1,0 +1,38 @@
+
+    flavorDimensions "whitelabel"
+
+    productFlavors {
+        standard {
+            dimension "whitelabel"
+            applicationIdSuffix ".standard"
+        }
+
+        tradeup {
+            dimension "whitelabel"
+            applicationIdSuffix ".tradeup"
+        }
+
+        veneka {
+            dimension "whitelabel"
+            applicationIdSuffix ".veneka"
+        }
+
+        shoprite {
+            dimension "whitelabel"
+            applicationIdSuffix ".shoprite"
+        }
+    }
+
+    android.variantFilter { variant ->
+        def flavor = variant.flavors.get(0).name
+        if (project.hasProperty("activeFlavor")) {
+            if (flavor != project.getProperty("activeFlavor")) {
+                variant.setIgnore(true)
+            }
+        }
+        else {
+            if (flavor != "standard") {
+                variant.setIgnore(true)
+            }
+        }
+    }

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="mobi.cloudone.whitelabel"
+        version="1.0">
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+    <name>TallorderWhitelabel</name>
+    <description></description>
+    <author>Pieter Marais</author>
+    <keywords></keywords>
+    <license>Copyright 2019 CloudOne.mobi All rights reserved</license>
+
+    <platform name="android">
+        <framework src="plugin.gradle" custom="true" type="gradleReference" />
+    </platform>
+
+
+    <info>Plugin installed successfully</info>
+</plugin>
